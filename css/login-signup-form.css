@@ -1,0 +1,273 @@
+.form-container {
+    width: 80%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 50px auto;
+    box-shadow: 4px 4px 7px 2px #cdc8c89e;
+}
+
+.signup-form-container {
+    flex-direction: row-reverse;
+}
+
+.signup-form-container .form-left-container {
+    background-image: url('../images/singup-bg.jpg');
+    background-size: cover;
+}
+
+.login-form-container .form-left-container {
+    background-image: url('../images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-left-container,
+.form-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-left-container {
+    background-color: rgb(197, 139, 255);
+    width: 40%;
+}
+
+.form-left-container div {
+    text-align: center;
+    padding: 0 40px;
+    width: 100%;
+    background-color: rgba(72, 70, 70, 0.645);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.form-left-container h3 {
+    margin: 0 0 5px 0;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.form-left-container span {
+    font-weight: 200;
+}
+
+.form-right-container {
+    align-items: center;
+    background-color: rgb(231, 244, 229);
+    width: 60%;
+    padding: 50px 60px;
+}
+
+.form-right {
+    width: 100%;
+}
+
+.form-right h1 {
+    text-align: center;
+    padding: 0px 0 15px 0;
+    border-bottom: 1px solid #878787;
+    margin: 0 0px 25px 0;
+    color: #393636;
+    font-weight: normal;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invalid-data-error {
+    background-color: rgb(244, 211, 211);
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.invalid-data-error i {
+    font-size: 30px;
+    margin: 0 10px 00 0;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 3px 0 7px;
+    position: relative;
+}
+
+.input-group label {
+    display: flex;
+    user-select: none;
+}
+
+.input-group label span {
+    color: red;
+    margin: 0 0 0 2px;
+}
+
+.input-group input {
+    padding: 10px 10px;
+    margin: 5px 0 0;
+    border: 1px solid rgb(179, 175, 175);
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: 2px solid rgb(144, 192, 255);
+    color: #757575;
+}
+
+.invalid-input-error {
+    width: max-content;
+    padding: 1px 6px;
+    font-size: 13px;
+    position: absolute;
+    bottom: -30px;
+    user-select: none;
+    right: 10px;
+    border-radius: 3px;
+    /* margin: 12px 0 0 17px; */
+}
+
+.invalid-input-error,
+.invalid-input-error::before {
+    color: red;
+    border: 1px solid red;
+    background-color: #fff7f7;
+}
+
+.invalid-input-error::before {
+    content: '';
+    width: 10px;
+    aspect-ratio: 1/1;
+    border-right: none;
+    border-top-left-radius: 2px;
+    border-bottom: none;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -6.5px;
+    right: 20px;
+}
+
+.input-group-password input {
+    padding-right: 45px;
+
+}
+
+.input-group-password i {
+    position: absolute;
+    right: 10px;
+    top: 39px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.forgot-password {
+    width: 100%;
+    margin: 3px 0;
+}
+
+.forgot-password a span {
+    /* color: rgb(0, 0, 255); */
+    color: black;
+}
+
+
+.form button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin: 30px 0 10px;
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    background-color: white;
+    color: black;
+}
+
+.other-links {
+    color: rgb(57, 57, 57);
+}
+
+.other-links a {
+    color: black;
+}
+
+
+/* Media queries for resposive view */
+@media screen and (max-width:1150px) {
+    .form-left-container div {
+
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .form-container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:800px) and (min-width:680px) {
+    .form-right-container {
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width:680px) {
+    .form-right-container {
+        width: 100%;
+    }
+
+    .form-left-container {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .form-right-container {
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .invalid-data-error {
+        font-size: 16px;
+    }
+
+    .invalid-data-error i {
+        font-size: 20px;
+    }
+
+    .invalid-data-error {
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Deme favicon -->
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+        <title>Login Page</title>
+
+        <!-- Online Fontawesome Icon cdn provided in the Header Component  -->
+        <!-- Custom Globle css link provided in Header Component-->
+        <!-- Online Fontawesome Icon cdn -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Slider CSS link for resposive the main container -->
+        <!-- <link rel="stylesheet" href="css/slider.css"> -->
+        <!-- Custom global css link -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- CSS link for the signup and login files only -->
+        <link rel="stylesheet" href="css/login-signup-form.css" />
+    </head>
+
+    <body>
+        <div class="header-container">
+            <header>
+                <div class="logo-link">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" />
+                    </a>
+                    <ul class="nav-links" id="nav-links">
+                        <!-------- For responsive view -------->
+                        <div class="resp-logo-btns">
+                            <div class="logo-xmark">
+                                <a href="0" class="logo">
+                                    <img src="images/logo.png" alt="" />
+                                </a>
+                                <i
+                                    class="fa-solid fa-x"
+                                    onclick="toggleNavbar()"
+                                ></i>
+                            </div>
+                            <div class="login-signup-btns">
+                                <a href="login.html">Login</a>
+                                <a href="signup.html">Signup</a>
+                            </div>
+                        </div>
+                        <!------------------------------->
+
+                        <li>
+                            <a href="index.html" class="line-ancher">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="line-ancher">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search-form.html" class="line-ancher">
+                                <span>Scholarship</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="line-ancher">
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="line-ancher">
+                                <span>Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- For responsive don't remove it -->
+                    <div onclick="toggleNavbar()"></div>
+                </div>
+                <div class="login-signup-btns">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Signup</a>
+                    <i class="fa-solid fa-bars" onclick="toggleNavbar()"></i>
+                </div>
+            </header>
+        </div>
+
+        <span class="slide-to-top-btn" title="Back to top">
+            <i class="fa-solid fa-angles-up"></i>
+        </span>
+
+        <div class="main-container">
+            <div class="form-container login-form-container">
+                <div class="form-left-container">
+                    <div>
+                        <h3>Welcome Back</h3>
+                        <span
+                            >Login to see what scholarships you recieved today
+                            !</span
+                        >
+                    </div>
+                </div>
+                <div class="form-right-container">
+                    <div class="form-right">
+                        <h1>Login to continue</h1>
+                        <form class="form" action="#" method="post">
+                            <!-- error message to show the password or username is invalid when the user have a fail attempt to login -->
+                            <div
+                                class="invalid-data-error"
+                                style="display: none"
+                            >
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Invalid username or password</span>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email <span>*</span> </label>
+                                <input
+                                    type="email"
+                                    required
+                                    id="email"
+                                    placeholder="Enter email or username"
+                                />
+                            </div>
+                            <div class="input-group input-group-password">
+                                <label for="password"
+                                    >Password <span>*</span>
+                                </label>
+                                <input
+                                    type="password"
+                                    required
+                                    id="password"
+                                    placeholder="Enter your password"
+                                />
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#" class="line-ancher">
+                                    <span>Forgot Password</span>
+                                </a>
+                            </div>
+                            <button type="submit">Login In</button>
+
+                            <div class="other-links">
+                                <span>Not have any account?</span>
+                                <a href="signup.html" class="line-ancher">
+                                    <span>Signup Now</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <footer>
+                <div class="footer-info">
+                    <a href="#" class="footer-logo">
+                        <img src="images/logo.png" />
+                    </a>
+                    <div class="footer-info-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Unde facere nostrum minima modi, quidem dolores
+                        commodi sunt velit deserunt amet blanditiis, quia
+                        voluptas
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-item">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="footer-social-item">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>Youtube</span>
+                        </a>
+                        <a href="#" class="footer-social-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="footer-social-item">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <div class="footer-links">
+                        <h3 class="footer-links-heading">Pages</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Mettings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-links-heading">About us</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Pages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-links-heading">Contact</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Something</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Footer Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Certificates</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-links-heading">help center</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Location</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Office</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Phone Number</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Policies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="line-ancher">
+                                    <span>Rules & Reguralations</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="footer-copywrite">
+                <span
+                    >&copy; - Frontend website for Scholarship | All right
+                    reserved</span
+                >
+            </div>
+        </div>
+    </body>
+
+    <script src="script/show-hide-passwords.js"></script>
+    <!-- header files -->
+
+    <script src="script/toggle-slide-btn-onScroll.js"></script>
+    <script src="script/toggleNavbar.js"></script>
+</html>
